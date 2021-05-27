@@ -1,7 +1,7 @@
-use webster::dictionary;
+use webster::old_dictionary;
 
 fn main() {
-    let word = dictionary("computer").unwrap();
+    let word = old_dictionary("computer").unwrap();
 
     println!("computer definition: {}", word);
 }
