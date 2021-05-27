@@ -1,10 +1,13 @@
 [package]
 name = "webster"
-version = "0.1.0"
+version = "0.1.1"
 authors = ["Grant Handy <grantshandy@gmail.com>"]
 edition = "2018"
 license = "MIT"
 description = "An offline version of webster's dictionary"
+keywords = ["dictionary", "definition", "webster"]
+repository = "https://github.com/grantshandy/webster-rs"
+documentation = "https://docs.rs/webster"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
