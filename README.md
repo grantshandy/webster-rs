@@ -1,10 +1,12 @@
 # webster-rs
 A Rust library containing an offline version of webster's dictionary.
 
+Add to Cargo.toml
 ```
-webster = 0.2.0
+webster = 0.2.1
 ```
 
+Simple example:
 ```rust
 fn main() {
     let word = "silence";

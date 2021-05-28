@@ -1,10 +1,12 @@
 //! # webster-rs
 //! A Rust library containing an offline version of webster's dictionary.
 //!
+//! Add to Cargo.toml
 //! ```
-//! webster = 0.2.0
+//! webster = 0.2.1
 //! ```
 //!
+//! Simple example:
 //! ```rust
 //! fn main() {
 //!     let word = "silence";
@@ -26,9 +28,9 @@ lazy_static! {
 }
 
 /// Translate a word
-pub fn definition<T: AsRef<str>>(word: T) -> Option<String> {
+pub fn definition<T: AsRef<str>>(word: T) -> Option<&'static str> {
     match &DICT[word.as_ref().to_uppercase()] {
-        Value::String(string) => return Some(string.to_string()),
+        Value::String(string) => return Some(string.as_str()),
         &_ => return None,
     }
 }
