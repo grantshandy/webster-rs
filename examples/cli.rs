@@ -1,9 +1,7 @@
-use webster::old_dictionary;
-
 fn main() {
-    let args = &std::env::args().collect::<Vec<_>>();
-    let word = args[1].to_string();
-    let definition = old_dictionary(word).unwrap();
+    let word = &std::env::args().collect::<Vec<_>>()[1].to_string();
+
+    let definition = webster::definition(word).unwrap();
 
     println!("{}", definition);
 }

@@ -1,13 +1,17 @@
 # webster-rs
 A Rust library containing an offline version of webster's dictionary.
 
+```
+webster = 0.2.0
+```
+
 ```rust
-use webster::dictionary;
-
 fn main() {
-    let word = dictionary("computer").unwrap();
+    let word = "silence";
 
-    println!("computer definition: {}", word);
+    let definition = webster::definition(word).unwrap();
+
+    println!("{} definition: {}", word, definition);
 }
 ```
 
@@ -21,5 +25,3 @@ The works in this repository are licensed under the MIT License, with the except
 From Project Gutenberg:
 
 > This eBook is for the use of anyone anywhere at no cost and with almost no restrictions whatsoever. You may copy it, give it away or re-use it under the terms of the Project Gutenberg License included with this eBook or online at www.gutenberg.net
-
-1: 12M
