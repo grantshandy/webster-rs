@@ -5,17 +5,16 @@
 //! use webster::dictionary;
 //!
 //! fn main() {
-//!     let word = dictionary("computer").unwrap();
-//!
-//!     println!("computer definition: {}", word);
+//!   let word = dictionary("computer").unwrap();
+//!   println!("computer definition: {}", word);
 //! }
 //! ```
 //!
 //! The definitions are not *great* but they'll do for simple projects if you need an open source local dictionary API.
 //! 
 //! # Runtime Decompression
-//! In an effort to reduce binary size, the dictionary is stored in a compressed binary format
-//! and then decompressed upon the first runtime access and stored in a BTree for low access latency.
+//! In an effort to reduce binary size (naive storage weighs `9mb`), the dictionary is stored in a compressed binary format in the executable (`4mb`)
+//! and then decompressed upon runtime access. The runtime container provides `O(log n)` access complexity and access time (anecdotally) faster than a BTreeMap.
 
 use std::io::Read;
 use lazy_static::{initialize, lazy_static};
