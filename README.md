@@ -1,12 +1,19 @@
 # webster-rs
 A Rust library containing an offline version of webster's dictionary.
 
-```rust
-use webster::dictionary;
+Add to Cargo.toml
+```
+webster = 0.2.1
+```
 
+Simple example:
+```rust
 fn main() {
-  let word = dictionary("computer").unwrap();
-  println!("computer definition: {}", word);
+    let word = "silence";
+
+    let definition = webster::definition(word).unwrap();
+
+    println!("{} definition: {}", word, definition);
 }
 ```
 

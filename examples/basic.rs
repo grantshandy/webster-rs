@@ -1,6 +1,7 @@
-use webster::dictionary;
-
 fn main() {
-  let word = dictionary("computer").unwrap();
-  println!("computer definition: {}", word);
+    let word = "silence";
+
+    let definition = webster::definition(word).unwrap();
+
+    println!("{} definition: {}", word, definition);
 }
