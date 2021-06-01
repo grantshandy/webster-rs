@@ -3,7 +3,7 @@
 //!
 //! Add to Cargo.toml
 //! ```
-//! webster = 0.2.1
+//! webster = 0.3.0
 //! ```
 //!
 //! Simple example:
@@ -11,7 +11,7 @@
 //! fn main() {
 //!     let word = "silence";
 //!
-//!     let definition = webster::definition(word).unwrap();
+//!     let definition = webster::dictionary(word).unwrap();
 //!
 //!     println!("{} definition: {}", word, definition);
 //! }
