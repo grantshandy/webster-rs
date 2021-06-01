@@ -39,5 +39,8 @@ fn main() {
     encoder.write_all(ir.as_bytes()).expect("Failed to compress dictionary");
     encoder.finish().into_result().expect("Failed to compress dictionary")
   };
-  write("./src/dictionary.gz", compressed).expect("Failed to write compressed dictionary to `./src/dictionary.gz`");
+
+  let target_dir = std::env::var("OUT_DIR").unwrap();
+
+  write(format!("{}/{}", target_dir, "dictionary.gz"), compressed).expect(&format!("Failed to write compressed dictionary to `{}/dictionary.gz`", target_dir));
 }

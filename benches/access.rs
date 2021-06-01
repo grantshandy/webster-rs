@@ -1,5 +1,6 @@
 use criterion::{black_box, criterion_group, criterion_main, Criterion};
 use webster::{preload, dictionary};
+
 fn criterion_benchmark(c: &mut Criterion) {
   preload();
 

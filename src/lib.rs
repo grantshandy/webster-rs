@@ -32,7 +32,7 @@ use libflate::gzip::Decoder;
 const DELIMITER: char = 0x0C as char;
 
 // this is baked into the binary
-static COMPRESSED_DICTIONARY: &[u8] = include_bytes!("dictionary.gz");
+static COMPRESSED_DICTIONARY: &[u8] = include_bytes!(concat!(env!("OUT_DIR"), "/dictionary.gz"));
 
 lazy_static! {
   static ref DICTIONARY: Vec<[String; 2]> = {

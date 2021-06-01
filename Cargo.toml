@@ -20,7 +20,7 @@ criterion = "0.3"
 
 [build-dependencies]
 serde_json = { version = "1.0.64" }
-libflate = "1"
+libflate = "1.1.0"
 
 [[bench]]
 name = "access"
