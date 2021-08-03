@@ -3,7 +3,7 @@
 //!
 //! Add to Cargo.toml
 //! ```
-//! webster = 0.3.0
+//! webster = "0.3.0"
 //! ```
 //!
 //! Simple example:
@@ -15,6 +15,9 @@
 //!
 //!     println!("{} definition: {}", word, definition);
 //! }
+//! ```
+//! ```
+//! silence definition: Be silent; -- used elliptically for let there be silence, orkeep silence. Shak.
 //! ```
 //!
 //! The definitions are not *great* but they'll do for simple projects if you need an open source local dictionary API.
