@@ -1,5 +1,5 @@
 fn main() {
-    let word = &std::env::args().collect::<Vec<_>>()[1].to_string();
+    let word = std::env::args().nth(1).unwrap().to_string();
 
     let definition = webster::dictionary(word).unwrap();
   

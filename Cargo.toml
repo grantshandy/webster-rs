@@ -16,12 +16,8 @@ lazy_static = "1.4.0"
 libflate = "1"
 
 [dev-dependencies]
-criterion = "0.3"
+chrono = "0.4.19"
 
 [build-dependencies]
 serde_json = { version = "1.0.64" }
 libflate = "1.1.0"
-
-[[bench]]
-name = "access"
-harness = false
