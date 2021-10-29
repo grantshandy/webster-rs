@@ -19,5 +19,5 @@ libflate = "1"
 chrono = "0.4.19"
 
 [build-dependencies]
-serde_json = { version = "1.0.64" }
+serde_json = "1.0.64"
 libflate = "1.1.0"

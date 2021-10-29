@@ -23,11 +23,11 @@ This library uses the dictionary.json file from [adambom's dictionary](https://g
 
 I'm currently working on my own program to parse the original public domain dictionary, but that's a [work in progress](https://github.com/grantshandy/webster-dictionary-json).
 
-# Runtime Decompression
+## Runtime Decompression
 In an effort to reduce binary size (naive storage weighs `9mb`), the dictionary is stored in a compressed gzip binary format in the executable (`4mb`)
 and then decompressed upon runtime access. The runtime container provides `O(log n)` access complexity and access time (anecdotally) faster than a BTreeMap.
 
-# License
+## License
 The works in this repository are licensed under the MIT License, with the exception of the contents of dictionary.json, which are licensed under the terms of the Project Gutenberg License:
 
 From Project Gutenberg:

@@ -13,7 +13,10 @@ fn main() {
 
         let end_duration = Utc::now();
 
-        let total_time = end_duration.signed_duration_since(start_duration).num_nanoseconds().unwrap();
+        let total_time = end_duration
+            .signed_duration_since(start_duration)
+            .num_nanoseconds()
+            .unwrap();
 
         println!("test {}, {} nanoseconds", num, total_time);
         num += 1;
